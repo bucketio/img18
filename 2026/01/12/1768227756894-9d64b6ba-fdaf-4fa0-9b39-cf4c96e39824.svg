@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="920" viewBox="0 0 1200 920">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#111c33"/>
+    </linearGradient>
+
+    <linearGradient id="titleGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#06b6d4"/>
+      <stop offset="0.5" stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#a855f7"/>
+    </linearGradient>
+
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="10" markerHeight="10" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94a3b8"/>
+    </marker>
+
+    <style>
+      .font { font-family: "Inter","Segoe UI",Roboto,Arial,sans-serif; }
+      .title { font-size: 40px; font-weight: 900; letter-spacing: 0.6px; fill: #ffffff; }
+      .layerTitle { font-size: 22px; font-weight: 900; fill: #0b1220; }
+      .line { font-size: 18px; font-weight: 700; fill: rgba(2,6,23,0.9); }
+      .hint { font-size: 15px; font-weight: 650; fill: #94a3b8; }
+      .cardStroke { stroke: #24314f; stroke-width: 2; }
+      .panelStroke { stroke: rgba(15,23,42,0.14); stroke-width: 2; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="920" fill="url(#bg)"/>
+
+  <!-- Outer card -->
+  <rect x="80" y="50" width="1040" height="820" rx="28" ry="28" fill="#0f172a" opacity="0.92" filter="url(#shadow)"/>
+  <rect x="80" y="50" width="1040" height="820" rx="28" ry="28" fill="none" class="cardStroke"/>
+
+  <!-- Title bar -->
+  <rect x="105" y="75" width="990" height="92" rx="20" ry="20" fill="url(#titleGrad)"/>
+  <text x="600" y="133" text-anchor="middle" class="font title">KATMANLI MİMARİ</text>
+
+  <!-- Geometry -->
+  <!-- Box: x=160 w=880 h=118 (first 4), last h=104 -->
+  <!-- StartY=200 gap=28 -->
+  <!-- Double arrows are lines with marker-start and marker-end -->
+
+  <!-- Presentation -->
+  <g class="font">
+    <rect x="160" y="200" width="880" height="118" rx="22" ry="22" fill="#e0f2fe" class="panelStroke"/>
+    <rect x="160" y="200" width="14" height="118" rx="7" ry="7" fill="#0284c7"/>
+    <text x="190" y="235" class="layerTitle">PRESENTATION LAYER (Sunum Katmanı)</text>
+    <text x="190" y="265" class="line">- WinForms</text>
+    <text x="190" y="290" class="line">- Forms, Controls</text>
+    <text x="190" y="315" class="line">- Kullanıcı etkileşimi</text>
+  </g>
+
+  <!-- Arrow between 1 and 2 -->
+  <line x1="600" y1="332" x2="600" y2="350" stroke="#94a3b8" stroke-width="5" stroke-linecap="round"
+        marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+
+  <!-- Application -->
+  <g class="font">
+    <rect x="160" y="360" width="880" height="118" rx="22" ry="22" fill="#dcfce7" class="panelStroke"/>
+    <rect x="160" y="360" width="14" height="118" rx="7" ry="7" fill="#16a34a"/>
+    <text x="190" y="395" class="layerTitle">APPLICATION LAYER (Uygulama Katmanı)</text>
+    <text x="190" y="425" class="line">- Business Logic (İş mantığı)</text>
+    <text x="190" y="450" class="line">- Services, Interfaces</text>
+    <text x="190" y="475" class="line">- Validation, Authorization</text>
+  </g>
+
+  <!-- Arrow between 2 and 3 -->
+  <line x1="600" y1="492" x2="600" y2="510" stroke="#94a3b8" stroke-width="5" stroke-linecap="round"
+        marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+
+  <!-- Infrastructure -->
+  <g class="font">
+    <rect x="160" y="520" width="880" height="118" rx="22" ry="22" fill="#fef9c3" class="panelStroke"/>
+    <rect x="160" y="520" width="14" height="118" rx="7" ry="7" fill="#ca8a04"/>
+    <text x="190" y="555" class="layerTitle">INFRASTRUCTURE LAYER (Altyapı Katmanı)</text>
+    <text x="190" y="585" class="line">- Data Access (Veri erişimi)</text>
+    <text x="190" y="610" class="line">- DbContext, Repositories</text>
+    <text x="190" y="635" class="line">- External Services</text>
+  </g>
+
+  <!-- Arrow between 3 and 4 -->
+  <line x1="600" y1="652" x2="600" y2="670" stroke="#94a3b8" stroke-width="5" stroke-linecap="round"
+        marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+
+  <!-- Domain -->
+  <g class="font">
+    <rect x="160" y="680" width="880" height="118" rx="22" ry="22" fill="#fae8ff" class="panelStroke"/>
+    <rect x="160" y="680" width="14" height="118" rx="7" ry="7" fill="#a21caf"/>
+    <text x="190" y="715" class="layerTitle">DOMAIN LAYER (Etki Alanı Katmanı)</text>
+    <text x="190" y="745" class="line">- Entities (Varlıklar)</text>
+    <text x="190" y="770" class="line">- Domain Models</text>
+    <text x="190" y="795" class="line">- Business Rules</text>
+  </g>
+
+  <!-- Arrow between 4 and 5 -->
+  <line x1="600" y1="812" x2="600" y2="830" stroke="#94a3b8" stroke-width="5" stroke-linecap="round"
+        marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+
+  <!-- Database -->
+  <g class="font">
+    <rect x="160" y="840" width="880" height="104" rx="22" ry="22" fill="#ffe4e6" class="panelStroke"/>
+    <rect x="160" y="840" width="14" height="104" rx="7" ry="7" fill="#e11d48"/>
+    <text x="190" y="875" class="layerTitle">DATABASE</text>
+    <text x="190" y="905" class="line">- SQLite</text>
+    <text x="190" y="930" class="line">- Notlar, Kategoriler tabloları</text>
+  </g>
+
+  <!-- Footer hint -->
+  <text x="600" y="865" text-anchor="middle" class="font hint">
+    Çift yönlü ok (↓ ↑): katmanlar arası çağrılar + veri/sonuç dönüşünü temsil eder.
+  </text>
+</svg>
