@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+  <rect width="1200" height="760" fill="#f7f6f2"/>
+  <text x="72" y="82" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="34" font-weight="700" fill="#17202a">价值链重排：机器人基础模型把控制点推向数据闭环</text>
+  <text x="72" y="122" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#5a6470">这张图帮助读者把论文能力翻译成产业变量：谁有数据、适配和交付能力，谁更接近付费。</text>
+  <g font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif">
+    <rect x="76" y="188" width="235" height="390" rx="18" fill="#ffffff" stroke="#d7d2ca"/>
+    <text x="108" y="235" font-size="24" font-weight="700" fill="#174466">硬件本体</text>
+    <text x="108" y="283" font-size="18" fill="#4b5965">关节、传感器</text>
+    <text x="108" y="318" font-size="18" fill="#4b5965">末端执行器</text>
+    <text x="108" y="353" font-size="18" fill="#4b5965">移动底盘</text>
+    <rect x="108" y="430" width="160" height="80" rx="12" fill="#e7f0f8"/>
+    <text x="132" y="464" font-size="17" font-weight="700" fill="#174466">变化</text>
+    <text x="132" y="492" font-size="16" fill="#174466">从主角变入口</text>
+  </g>
+  <g font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif">
+    <rect x="350" y="188" width="235" height="390" rx="18" fill="#ffffff" stroke="#d7d2ca"/>
+    <text x="382" y="235" font-size="24" font-weight="700" fill="#155b4e">具身数据</text>
+    <text x="382" y="283" font-size="18" fill="#4b5965">真实轨迹</text>
+    <text x="382" y="318" font-size="18" fill="#4b5965">失败样本</text>
+    <text x="382" y="353" font-size="18" fill="#4b5965">客户现场分布</text>
+    <rect x="382" y="430" width="160" height="80" rx="12" fill="#e4f1ed"/>
+    <text x="406" y="464" font-size="17" font-weight="700" fill="#155b4e">变化</text>
+    <text x="406" y="492" font-size="16" fill="#155b4e">成为训练燃料</text>
+  </g>
+  <g font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif">
+    <rect x="624" y="188" width="235" height="390" rx="18" fill="#ffffff" stroke="#d7d2ca"/>
+    <text x="656" y="235" font-size="24" font-weight="700" fill="#744316">模型底座</text>
+    <text x="656" y="283" font-size="18" fill="#4b5965">多模态理解</text>
+    <text x="656" y="318" font-size="18" fill="#4b5965">动作生成</text>
+    <text x="656" y="353" font-size="18" fill="#4b5965">跨机型迁移</text>
+    <rect x="656" y="430" width="160" height="80" rx="12" fill="#f3ece2"/>
+    <text x="680" y="464" font-size="17" font-weight="700" fill="#744316">变化</text>
+    <text x="680" y="492" font-size="16" fill="#744316">决定软件溢价</text>
+  </g>
+  <g font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif">
+    <rect x="898" y="188" width="235" height="390" rx="18" fill="#ffffff" stroke="#d7d2ca"/>
+    <text x="930" y="235" font-size="24" font-weight="700" fill="#583875">场景交付</text>
+    <text x="930" y="283" font-size="18" fill="#4b5965">物流、制造</text>
+    <text x="930" y="318" font-size="18" fill="#4b5965">家庭、商业服务</text>
+    <text x="930" y="353" font-size="18" fill="#4b5965">安全与运维</text>
+    <rect x="930" y="430" width="160" height="80" rx="12" fill="#eee9f5"/>
+    <text x="954" y="464" font-size="17" font-weight="700" fill="#583875">变化</text>
+    <text x="954" y="492" font-size="16" fill="#583875">验证真实 ROI</text>
+  </g>
+  <path d="M300 620 C480 690, 730 690, 930 620" fill="none" stroke="#17202a" stroke-width="4"/>
+  <text x="420" y="690" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" font-weight="700" fill="#17202a">闭环越短，模型越能变成产品；闭环越长，demo 越容易停在融资材料里。</text>
+</svg>
