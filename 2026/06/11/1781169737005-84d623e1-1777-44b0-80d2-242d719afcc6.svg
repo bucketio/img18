@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+  <title id="title">知识产权骗局类型速览</title>
+  <desc id="desc">列出到付文件、假续展、假评奖、假维权和低价包过五类知识产权骗局</desc>
+  <rect width="1200" height="820" fill="#fbfaf6"/>
+  <text x="80" y="92" fill="#17212b" font-size="48" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-weight="800">常见套路，不止一种脸</text>
+  <text x="80" y="142" fill="#5b6876" font-size="24" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif">凡是利用公开信息制造紧迫感、冒充官方、绕开正规系统收款，都要先停一下。</text>
+  <g font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif">
+    <g transform="translate(80 210)">
+      <rect width="320" height="210" rx="12" fill="#ffffff" stroke="#d8e0e7" stroke-width="2"/>
+      <circle cx="62" cy="62" r="34" fill="#fee2e2"/>
+      <text x="48" y="75" font-size="38" font-weight="800" fill="#dc2626">1</text>
+      <text x="112" y="58" font-size="28" font-weight="800" fill="#17212b">到付文件</text>
+      <text x="112" y="98" font-size="22" fill="#5b6876">“专利书”“商标公告”</text>
+      <text x="36" y="156" font-size="22" fill="#344054">小钱骗得快，靠的是</text>
+      <text x="36" y="190" font-size="22" fill="#344054">申请信息已经公开。</text>
+    </g>
+    <g transform="translate(440 210)">
+      <rect width="320" height="210" rx="12" fill="#ffffff" stroke="#d8e0e7" stroke-width="2"/>
+      <circle cx="62" cy="62" r="34" fill="#ffedd5"/>
+      <text x="48" y="75" font-size="38" font-weight="800" fill="#ea580c">2</text>
+      <text x="112" y="58" font-size="28" font-weight="800" fill="#17212b">假续展催缴</text>
+      <text x="112" y="98" font-size="22" fill="#5b6876">提前几年吓你过期</text>
+      <text x="36" y="156" font-size="22" fill="#344054">把“提醒”包装成</text>
+      <text x="36" y="190" font-size="22" fill="#344054">“最后通知”。</text>
+    </g>
+    <g transform="translate(800 210)">
+      <rect width="320" height="210" rx="12" fill="#ffffff" stroke="#d8e0e7" stroke-width="2"/>
+      <circle cx="62" cy="62" r="34" fill="#dbeafe"/>
+      <text x="48" y="75" font-size="38" font-weight="800" fill="#2563eb">3</text>
+      <text x="112" y="58" font-size="28" font-weight="800" fill="#17212b">评奖入编</text>
+      <text x="112" y="98" font-size="22" fill="#5b6876">交钱拿证书、上榜单</text>
+      <text x="36" y="156" font-size="22" fill="#344054">利用“荣誉”“政策”</text>
+      <text x="36" y="190" font-size="22" fill="#344054">诱导付款。</text>
+    </g>
+    <g transform="translate(260 470)">
+      <rect width="320" height="210" rx="12" fill="#ffffff" stroke="#d8e0e7" stroke-width="2"/>
+      <circle cx="62" cy="62" r="34" fill="#dcfce7"/>
+      <text x="48" y="75" font-size="38" font-weight="800" fill="#16a34a">4</text>
+      <text x="112" y="58" font-size="28" font-weight="800" fill="#17212b">假维权恐吓</text>
+      <text x="112" y="98" font-size="22" fill="#5b6876">群发函件、要求私了</text>
+      <text x="36" y="156" font-size="22" fill="#344054">不先核验证据链，</text>
+      <text x="36" y="190" font-size="22" fill="#344054">就容易被带节奏。</text>
+    </g>
+    <g transform="translate(620 470)">
+      <rect width="320" height="210" rx="12" fill="#ffffff" stroke="#d8e0e7" stroke-width="2"/>
+      <circle cx="62" cy="62" r="34" fill="#ede9fe"/>
+      <text x="48" y="75" font-size="38" font-weight="800" fill="#7c3aed">5</text>
+      <text x="112" y="58" font-size="28" font-weight="800" fill="#17212b">低价包过</text>
+      <text x="112" y="98" font-size="22" fill="#5b6876">包授权、包下证、包补贴</text>
+      <text x="36" y="156" font-size="22" fill="#344054">承诺越绝对，</text>
+      <text x="36" y="190" font-size="22" fill="#344054">越要看合同和资质。</text>
+    </g>
+  </g>
+</svg>
