@@ -1,0 +1,107 @@
+<svg viewBox="0 0 1180 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">K4 Framework Enterprise Knowledge Governance</title>
+  <desc id="desc">A light themed diagram showing K1 knowledge planning, K2 structure planning, K3 governance, K4 metadata, and permission management across all layers.</desc>
+  <defs>
+    <style>
+      text {
+        font-family: Inter, "Noto Sans SC", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+        fill: #172033;
+      }
+      .small { font-size: 16px; fill: #667085; }
+      .tiny { font-size: 13px; fill: #667085; }
+      .label { font-size: 18px; font-weight: 700; }
+      .heading { font-size: 24px; font-weight: 800; }
+      .title { font-size: 34px; font-weight: 850; }
+      .subtitle { font-size: 18px; fill: #667085; }
+      .pill { font-size: 14px; font-weight: 700; fill: #344054; }
+      .white { fill: #ffffff; }
+    </style>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#101828" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrow-blue" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#2f80ed"/>
+    </marker>
+    <linearGradient id="permissionGradient" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#e0f2fe"/>
+      <stop offset="0.5" stop-color="#e7f8ef"/>
+      <stop offset="1" stop-color="#fff7db"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1180" height="760" fill="#f7f9fc"/>
+  <path d="M0 140 C240 90, 420 170, 650 120 C865 72, 1005 110, 1180 72 L1180 0 L0 0 Z" fill="#eef6ff"/>
+  <circle cx="1020" cy="118" r="88" fill="#fff4cc" opacity="0.55"/>
+  <circle cx="118" cy="608" r="112" fill="#e6f4ea" opacity="0.62"/>
+
+  <text x="72" y="74" class="title">K4 Framework™ 企业知识治理方法论</text>
+  <text x="72" y="108" class="subtitle">Knowledge → Structure → Governance → Metadata</text>
+  <text x="72" y="138" class="small">从业务场景出发，把企业文档建设成可检索、可授权、可维护、可被 Agent 调用的知识体系。</text>
+
+  <rect x="72" y="182" width="1036" height="458" rx="24" fill="#ffffff" filter="url(#shadow)"/>
+  <rect x="104" y="215" width="972" height="76" rx="18" fill="url(#permissionGradient)" stroke="#b9d5ff"/>
+  <text x="590" y="248" text-anchor="middle" class="heading">权限管理贯穿四层</text>
+  <text x="590" y="276" text-anchor="middle" class="small">业务边界、目录继承、治理变更、AI 调用范围一起设计</text>
+
+  <line x1="222" y1="374" x2="394" y2="374" stroke="#2f80ed" stroke-width="3" marker-end="url(#arrow-blue)"/>
+  <line x1="480" y1="374" x2="652" y2="374" stroke="#2f80ed" stroke-width="3" marker-end="url(#arrow-blue)"/>
+  <line x1="738" y1="374" x2="910" y2="374" stroke="#2f80ed" stroke-width="3" marker-end="url(#arrow-blue)"/>
+
+  <g transform="translate(104 326)">
+    <rect width="220" height="208" rx="20" fill="#eef6ff" stroke="#84bdf8" stroke-width="2"/>
+    <circle cx="42" cy="42" r="24" fill="#2f80ed"/>
+    <text x="42" y="49" text-anchor="middle" class="white" font-size="18" font-weight="800">K1</text>
+    <text x="78" y="36" class="label">Knowledge Planning</text>
+    <text x="78" y="62" class="small">知识库规划</text>
+    <text x="26" y="108" class="small">按业务场景划分知识库</text>
+    <text x="26" y="138" class="tiny">售前 / 客服 / 交付 / 研发 / 制度</text>
+    <text x="26" y="166" class="tiny">同步确定 owner 与访问边界</text>
+    <rect x="26" y="178" width="120" height="24" rx="12" fill="#d7ebff"/>
+    <text x="86" y="195" text-anchor="middle" class="pill">知识在哪里</text>
+  </g>
+
+  <g transform="translate(362 326)">
+    <rect width="220" height="208" rx="20" fill="#ecfdf3" stroke="#7bd29a" stroke-width="2"/>
+    <circle cx="42" cy="42" r="24" fill="#12b76a"/>
+    <text x="42" y="49" text-anchor="middle" class="white" font-size="18" font-weight="800">K2</text>
+    <text x="78" y="36" class="label">Structure Planning</text>
+    <text x="78" y="62" class="small">目录与分块规划</text>
+    <text x="26" y="108" class="small">树形目录组织文件</text>
+    <text x="26" y="138" class="tiny">PPT 用 page，制度用 title</text>
+    <text x="26" y="166" class="tiny">QA 对沉淀人的经验</text>
+    <rect x="26" y="178" width="132" height="24" rx="12" fill="#d8f6e5"/>
+    <text x="92" y="195" text-anchor="middle" class="pill">知识怎么组织</text>
+  </g>
+
+  <g transform="translate(620 326)">
+    <rect width="220" height="208" rx="20" fill="#fff7e6" stroke="#f6bf5b" stroke-width="2"/>
+    <circle cx="42" cy="42" r="24" fill="#f79009"/>
+    <text x="42" y="49" text-anchor="middle" class="white" font-size="18" font-weight="800">K3</text>
+    <text x="78" y="36" class="label">Governance</text>
+    <text x="78" y="62" class="small">企业语义治理</text>
+    <text x="26" y="108" class="small">统一企业内部说法</text>
+    <text x="26" y="138" class="tiny">术语 / 同义词 / 标签体系</text>
+    <text x="26" y="166" class="tiny">解决有答案却搜不到</text>
+    <rect x="26" y="178" width="120" height="24" rx="12" fill="#ffedc2"/>
+    <text x="86" y="195" text-anchor="middle" class="pill">企业怎么说</text>
+  </g>
+
+  <g transform="translate(878 326)">
+    <rect width="198" height="208" rx="20" fill="#f4f0ff" stroke="#b9a4ff" stroke-width="2"/>
+    <circle cx="42" cy="42" r="24" fill="#7a5af8"/>
+    <text x="42" y="49" text-anchor="middle" class="white" font-size="18" font-weight="800">K4</text>
+    <text x="78" y="36" class="label">Metadata</text>
+    <text x="78" y="62" class="small">元数据治理</text>
+    <text x="26" y="108" class="small">让 AI 理解适用范围</text>
+    <text x="26" y="138" class="tiny">版本 / 日期 / 部门 / 作者</text>
+    <text x="26" y="166" class="tiny">过滤过期或不适用内容</text>
+    <rect x="26" y="178" width="126" height="24" rx="12" fill="#e7ddff"/>
+    <text x="89" y="195" text-anchor="middle" class="pill">AI 怎么理解</text>
+  </g>
+
+  <rect x="146" y="590" width="888" height="82" rx="20" fill="#f9fafb" stroke="#d0d5dd"/>
+  <text x="590" y="624" text-anchor="middle" class="heading">落地结果</text>
+  <text x="590" y="654" text-anchor="middle" class="small">该分的知识库分清楚，该管的权限管起来，该组织的目录组织好，该统一的术语统一掉，该标注的元数据标完整。</text>
+
+  <text x="72" y="714" class="tiny">KnowFlow K4 Framework™ | Enterprise Knowledge Governance</text>
+</svg>
