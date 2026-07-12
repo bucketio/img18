@@ -1,0 +1,24 @@
+<svg viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="680" height="320" fill="#fafbfc" rx="8"/>
+  <text x="340" y="25" fill="#333" font-size="14" font-weight="700" text-anchor="middle">存量房产市值 vs 全社会债务（三口径）</text>
+  <text x="40" y="55" fill="#1D9E75" font-size="12" font-weight="700">口径1：存量房产 ÷ 全社会总债务</text>
+  <rect x="40" y="65" width="580" height="24" fill="#eee" rx="3"/>
+  <rect x="40" y="65" width="425" height="24" fill="#1D9E75" rx="3"/>
+  <text x="415" y="82" fill="#fff" font-size="12" font-weight="700">73.2%（中性300÷410）</text>
+  <text x="40" y="103" fill="#888" font-size="10">乐观420÷410=97.6% | 保守240÷410=58.5%</text>
+  <text x="350" y="103" fill="#1D9E75" font-size="10" font-weight="600">→ 房产覆盖全社会债务60%~98%</text>
+  <text x="40" y="135" fill="#2980b9" font-size="12" font-weight="700">口径2：存量房产 ÷ 地产专项债务</text>
+  <rect x="40" y="145" width="580" height="24" fill="#eee" rx="3"/>
+  <rect x="40" y="145" width="580" height="24" fill="#2980b9" rx="3"/>
+  <text x="370" y="162" fill="#fff" font-size="12" font-weight="700">500%（5倍）（300÷60）</text>
+  <text x="40" y="183" fill="#888" font-size="10">所有房子总价值是地产相关负债的5倍</text>
+  <text x="350" y="183" fill="#2980b9" font-size="10" font-weight="600">→ 抵押物安全垫很厚，风险在流动性不在总量</text>
+  <text x="40" y="215" fill="#e74c3c" font-size="12" font-weight="700">口径3：居民住房 ÷ 居民部门总负债</text>
+  <rect x="40" y="225" width="580" height="24" fill="#eee" rx="3"/>
+  <rect x="40" y="225" width="388" height="24" fill="#e74c3c" rx="3"/>
+  <text x="400" y="242" fill="#fff" font-size="12" font-weight="700">335%（3.35倍）（280÷83.58）</text>
+  <text x="40" y="263" fill="#888" font-size="10">居民房产是居民全部欠款的3.35倍</text>
+  <text x="350" y="263" fill="#e74c3c" font-size="10" font-weight="600">→ 住房是居民资产负债表核心压舱石</text>
+  <rect x="40" y="285" width="600" height="28" fill="#f0fbf5" rx="4" stroke="#c8e6d5"/>
+  <text x="340" y="304" fill="#1D9E75" font-size="12" font-weight="700" text-anchor="middle">结论：房产是经济体唯一能覆盖绝大多数债务的实物抵押物</text>
+</svg>
