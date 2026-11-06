@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 1360" width="750" height="1360" role="img" aria-labelledby="cc-title cc-desc">
+<title id="cc-title">压缩的是历史，接力的是任务状态</title>
+<desc id="cc-desc">16 秒循环的教学示意。第一步，从旧历史提取候选任务状态：筛选论文，保留训练代码与训练数据公开的硬约束、核验 P2 数据的待办和 E2 引用；大段证据原文留在外部。第二步，核对候选状态中的硬约束与 E2 引用。第三步，把核对后的任务状态与近期消息组成下一轮上下文，旧历史退出活动窗口。第四步，需要判断 P2 时，沿 E2 主动请求并取回对应证据片段。外部保存不意味着每轮自动读入，也不保证核验结果正确。</desc>
+<defs>
+<marker id="cc-arrow-gray" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 1 1 L 8 5 L 1 9" fill="none" stroke="#CBD5D9" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker>
+<marker id="cc-arrow-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 1 1 L 8 5 L 1 9" fill="none" stroke="#138A84" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker>
+<marker id="cc-arrow-orange" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 1 1 L 8 5 L 1 9" fill="none" stroke="#F28C45" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs><g font-family="'PingFang SC','Noto Sans CJK SC','Microsoft YaHei',sans-serif">
+<rect x="0" y="0" width="750" height="1360" rx="0" fill="#FAF8F2" stroke="none" stroke-width="2" />
+<text x="36" y="62" font-size="38" fill="#17324D" font-weight="700" text-anchor="start" >压缩的是历史，接力的是任务状态</text>
+<text x="36" y="109" font-size="32" fill="#647585" font-weight="500" text-anchor="start" >保留要点与引用，需要时取回证据</text>
+<rect x="36" y="139" width="158" height="60" rx="14" fill="#EEF1F1" stroke="none" stroke-width="2" />
+<text x="115" y="180" font-size="32" fill="#647585" font-weight="600" text-anchor="middle" >① 提取</text>
+<g opacity="0"><animate attributeName="opacity" values="1;0;0;0;1" keyTimes="0;0.25;0.5;0.75;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<rect x="36" y="139" width="158" height="60" rx="14" fill="#138A84" stroke="none" stroke-width="2" />
+<text x="115" y="180" font-size="32" fill="#FFFFFF" font-weight="700" text-anchor="middle" >① 提取</text>
+</g>
+<rect x="210" y="139" width="158" height="60" rx="14" fill="#EEF1F1" stroke="none" stroke-width="2" />
+<text x="289" y="180" font-size="32" fill="#647585" font-weight="600" text-anchor="middle" >② 核对</text>
+<g opacity="0"><animate attributeName="opacity" values="0;1;0;0;0" keyTimes="0;0.25;0.5;0.75;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<rect x="210" y="139" width="158" height="60" rx="14" fill="#F28C45" stroke="none" stroke-width="2" />
+<text x="289" y="180" font-size="32" fill="#FFFFFF" font-weight="700" text-anchor="middle" >② 核对</text>
+</g>
+<rect x="384" y="139" width="158" height="60" rx="14" fill="#EEF1F1" stroke="none" stroke-width="2" />
+<text x="463" y="180" font-size="32" fill="#647585" font-weight="600" text-anchor="middle" >③ 换入</text>
+<g opacity="0"><animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;0.25;0.5;0.75;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<rect x="384" y="139" width="158" height="60" rx="14" fill="#138A84" stroke="none" stroke-width="2" />
+<text x="463" y="180" font-size="32" fill="#FFFFFF" font-weight="700" text-anchor="middle" >③ 换入</text>
+</g>
+<rect x="558" y="139" width="158" height="60" rx="14" fill="#EEF1F1" stroke="none" stroke-width="2" />
+<text x="637" y="180" font-size="32" fill="#647585" font-weight="600" text-anchor="middle" >④ 回取</text>
+<g opacity="0"><animate attributeName="opacity" values="0;0;0;1;0" keyTimes="0;0.25;0.5;0.75;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<rect x="558" y="139" width="158" height="60" rx="14" fill="#138A84" stroke="none" stroke-width="2" />
+<text x="637" y="180" font-size="32" fill="#FFFFFF" font-weight="700" text-anchor="middle" >④ 回取</text>
+</g>
+<rect x="48" y="236" width="276" height="180" rx="16" fill="#FFFFFF" stroke="#CBD5D9" stroke-width="2" />
+<text x="72" y="284" font-size="36" fill="#17324D" font-weight="700" text-anchor="start" >旧历史</text>
+<text x="72" y="333" font-size="31" fill="#17324D" font-weight="500" text-anchor="start" >消息 · 工具结果</text>
+<text x="72" y="386" font-size="30" fill="#647585" font-weight="500" text-anchor="start" >压缩后退出窗口</text>
+<g opacity="0"><animate attributeName="opacity" values="1;0;0;0;1" keyTimes="0;0.25;0.5;0.75;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<rect x="63" y="351" width="247" height="46" rx="0" fill="#FFFFFF" stroke="none" stroke-width="2" />
+<text x="72" y="386" font-size="30" fill="#647585" font-weight="600" text-anchor="start" >参与本轮压缩</text>
+</g>
+<g opacity="0"><animate attributeName="opacity" values="0;1;0;0;0" keyTimes="0;0.25;0.5;0.75;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<rect x="63" y="351" width="247" height="46" rx="0" fill="#FFFFFF" stroke="none" stroke-width="2" />
+<text x="72" y="386" font-size="30" fill="#647585" font-weight="600" text-anchor="start" >等待核对完成</text>
+</g>
+<g opacity="0"><animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;0.25;0.5;0.75;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<rect x="63" y="351" width="247" height="46" rx="0" fill="#FFFFFF" stroke="none" stroke-width="2" />
+<text x="72" y="386" font-size="30" fill="#F28C45" font-weight="600" text-anchor="start" >已退出活动窗口</text>
+</g>
+<g opacity="0"><animate attributeName="opacity" values="0;0;0;1;0" keyTimes="0;0.25;0.5;0.75;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<rect x="63" y="351" width="247" height="46" rx="0" fill="#FFFFFF" stroke="none" stroke-width="2" />
+<text x="72" y="386" font-size="30" fill="#F28C45" font-weight="600" text-anchor="start" >已退出活动窗口</text>
+</g>
+<rect x="404" y="236" width="262" height="180" rx="16" fill="#FFF4E8" stroke="#F28C45" stroke-width="2" />
+<text x="426" y="284" font-size="36" fill="#17324D" font-weight="700" text-anchor="start" >外部证据</text>
+<text x="535" y="335" font-size="35" fill="#F28C45" font-weight="700" text-anchor="middle" >E2 · P2</text>
+<text x="535" y="385" font-size="33" fill="#17324D" font-weight="500" text-anchor="middle" >数据说明页</text>
+<path d="M 328 327 H 395" fill="none" stroke="#138A84" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#cc-arrow-teal)" />
+<text x="364" y="308" font-size="28" fill="#138A84" font-weight="600" text-anchor="middle" >留存</text>
+<g transform="translate(330 327)"><g opacity="0">
+<animateTransform attributeName="transform" type="translate" values="0 0;0 0;56 0;56 0" keyTimes="0;0.035;0.095;1" dur="16s" begin="0s" repeatCount="indefinite"/>
+<animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.030000000000000002;0.035;0.095;0.107;1" dur="16s" begin="0s" repeatCount="indefinite"/>
+<rect x="-7" y="-7" width="14" height="14" rx="4" fill="#138A84" stroke="none" stroke-width="2" />
+</g>
+</g>
+<path d="M 186 420 V 460" fill="none" stroke="#138A84" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#cc-arrow-teal)" />
+<g transform="translate(186 424)"><g opacity="0">
+<animateTransform attributeName="transform" type="translate" values="0 0;0 0;0 30;0 30" keyTimes="0;0.12;0.17;1" dur="16s" begin="0s" repeatCount="indefinite"/>
+<animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.11499999999999999;0.12;0.17;0.18200000000000002;1" dur="16s" begin="0s" repeatCount="indefinite"/>
+<rect x="-7" y="-7" width="14" height="14" rx="4" fill="#138A84" stroke="none" stroke-width="2" />
+</g>
+</g>
+<rect x="48" y="472" width="618" height="294" rx="16" fill="#FFFFFF" stroke="#CBD5D9" stroke-width="2" />
+<text x="72" y="518" font-size="36" fill="#17324D" font-weight="700" text-anchor="start" >候选任务状态</text>
+<text x="72" y="569" font-size="32" fill="#647585" font-weight="500" text-anchor="start" >目标</text>
+<text x="176" y="569" font-size="34" fill="#17324D" font-weight="500" text-anchor="start" >筛选论文</text>
+<text x="72" y="613" font-size="32" fill="#647585" font-weight="500" text-anchor="start" >约束</text>
+<text x="176" y="613" font-size="34" fill="#17324D" font-weight="600" text-anchor="start" >训练代码＋训练数据公开</text>
+<text x="72" y="657" font-size="32" fill="#647585" font-weight="500" text-anchor="start" >待办</text>
+<text x="176" y="657" font-size="34" fill="#17324D" font-weight="500" text-anchor="start" >核验 P2 数据</text>
+<text x="72" y="701" font-size="32" fill="#647585" font-weight="500" text-anchor="start" >引用</text>
+<text x="176" y="701" font-size="34" fill="#17324D" font-weight="500" text-anchor="start" >E2 → P2 数据页</text>
+<text x="72" y="744" font-size="28" fill="#647585" font-weight="500" text-anchor="start" >让下一轮知道：要做什么、还缺什么</text>
+<g opacity="0"><animate attributeName="opacity" values="1;0;0;0;1" keyTimes="0;0.25;0.5;0.75;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<rect x="48" y="472" width="618" height="294" rx="16" fill="none" stroke="#138A84" stroke-width="4" />
+</g>
+<g opacity="0"><animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;0.25;0.5;0.75;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<rect x="67" y="482" width="570" height="48" rx="0" fill="#FFFFFF" stroke="none" stroke-width="2" />
+<text x="72" y="518" font-size="36" fill="#138A84" font-weight="700" text-anchor="start" >核对后的任务状态</text>
+</g>
+<g opacity="0"><animate attributeName="opacity" values="0;0;0;1;0" keyTimes="0;0.25;0.5;0.75;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<rect x="67" y="482" width="570" height="48" rx="0" fill="#FFFFFF" stroke="none" stroke-width="2" />
+<text x="72" y="518" font-size="36" fill="#138A84" font-weight="700" text-anchor="start" >核对后的任务状态</text>
+</g>
+<path d="M 357 772 V 811" fill="none" stroke="#138A84" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#cc-arrow-teal)" />
+<g transform="translate(357 775)"><g opacity="0">
+<animateTransform attributeName="transform" type="translate" values="0 0;0 0;0 27;0 27" keyTimes="0;0.27;0.325;1" dur="16s" begin="0s" repeatCount="indefinite"/>
+<animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.265;0.27;0.325;0.337;1" dur="16s" begin="0s" repeatCount="indefinite"/>
+<rect x="-7" y="-7" width="14" height="14" rx="4" fill="#138A84" stroke="none" stroke-width="2" />
+</g>
+</g>
+<rect x="48" y="824" width="618" height="96" rx="16" fill="#FFFFFF" stroke="#CBD5D9" stroke-width="2" />
+<text x="357" y="884" font-size="35" fill="#17324D" font-weight="600" text-anchor="middle" >核对硬约束和 E2 引用</text>
+<g opacity="0"><animate attributeName="opacity" values="0;1;0;0;0" keyTimes="0;0.25;0.5;0.75;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<rect x="48" y="824" width="618" height="96" rx="16" fill="none" stroke="#F28C45" stroke-width="4" />
+</g>
+<path d="M 357 926 V 972" fill="none" stroke="#138A84" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#cc-arrow-teal)" />
+<g transform="translate(357 931)"><g opacity="0">
+<animateTransform attributeName="transform" type="translate" values="0 0;0 0;0 32;0 32" keyTimes="0;0.52;0.58;1" dur="16s" begin="0s" repeatCount="indefinite"/>
+<animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.515;0.52;0.58;0.592;1" dur="16s" begin="0s" repeatCount="indefinite"/>
+<rect x="-7" y="-7" width="14" height="14" rx="4" fill="#138A84" stroke="none" stroke-width="2" />
+</g>
+</g>
+<rect x="48" y="984" width="618" height="176" rx="16" fill="#E9F4F1" stroke="#138A84" stroke-width="2" />
+<text x="72" y="1031" font-size="36" fill="#138A84" font-weight="700" text-anchor="start" >下一轮上下文</text>
+<text x="357" y="1085" font-size="36" fill="#17324D" font-weight="600" text-anchor="middle" >任务状态 ＋ 近期消息</text>
+<g opacity="1"><animate attributeName="opacity" values="1;0;1" keyTimes="0;0.9375;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<text x="357" y="1132" font-size="32" fill="#647585" font-weight="500" text-anchor="middle" >判断 P2 → 按 E2 请求原文</text>
+</g>
+<g opacity="0"><animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;0.25;0.5;0.75;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<rect x="48" y="984" width="618" height="176" rx="16" fill="none" stroke="#138A84" stroke-width="4" />
+</g>
+<path d="M 669 1069 H 687 V 318 H 670" fill="none" stroke="#138A84" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#cc-arrow-teal)" opacity="0.28"/>
+<path d="M 670 371 H 719 V 1123 H 670" fill="none" stroke="#F28C45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#cc-arrow-orange)" opacity="0.28"/>
+<g opacity="0"><animate attributeName="opacity" values="0;0;0;1;0" keyTimes="0;0.25;0.5;0.75;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<path d="M 669 1069 H 687 V 318 H 670" fill="none" stroke="#138A84" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#cc-arrow-teal)" />
+<path d="M 670 371 H 719 V 1123 H 670" fill="none" stroke="#F28C45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#cc-arrow-orange)" />
+<rect x="404" y="236" width="262" height="180" rx="16" fill="none" stroke="#F28C45" stroke-width="4" />
+</g>
+<g transform="translate(671 1069)"><g opacity="0">
+<animateTransform attributeName="transform" type="translate" values="0 0;0 0;16 0;16 -751;0 -751;0 -751" keyTimes="0;0.765;0.785;0.825;0.835;1" dur="16s" begin="0s" repeatCount="indefinite"/>
+<animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.76;0.765;0.835;0.847;1" dur="16s" begin="0s" repeatCount="indefinite"/>
+<rect x="-7" y="-7" width="14" height="14" rx="4" fill="#138A84" stroke="none" stroke-width="2" />
+</g>
+</g>
+<g transform="translate(671 371)"><g opacity="0">
+<animateTransform attributeName="transform" type="translate" values="0 0;0 0;48 0;48 752;0 752;0 752" keyTimes="0;0.85;0.865;0.91;0.925;1" dur="16s" begin="0s" repeatCount="indefinite"/>
+<animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.845;0.85;0.925;0.937;1" dur="16s" begin="0s" repeatCount="indefinite"/>
+<rect x="-7" y="-7" width="14" height="14" rx="4" fill="#F28C45" stroke="none" stroke-width="2" />
+</g>
+</g>
+<g opacity="0"><animate attributeName="opacity" values="0;1;0" keyTimes="0;0.9375;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<rect x="64" y="1100" width="585" height="46" rx="0" fill="#E9F4F1" stroke="none" stroke-width="2" />
+<text x="357" y="1132" font-size="32" fill="#138A84" font-weight="600" text-anchor="middle" >证据片段已取回，再判断 P2</text>
+</g>
+<circle cx="70" cy="1209" r="7" fill="#138A84"/>
+<text x="89" y="1220" font-size="31" fill="#138A84" font-weight="600" text-anchor="start" >请求 E2</text>
+<circle cx="358" cy="1209" r="7" fill="#F28C45"/>
+<text x="377" y="1220" font-size="31" fill="#F28C45" font-weight="600" text-anchor="start" >返回证据片段</text>
+<text x="375" y="1286" font-size="32" fill="#17324D" font-weight="600" text-anchor="middle" >原文留在外部 ≠ 每轮自动读入</text>
+<text x="375" y="1331" font-size="27" fill="#647585" font-weight="500" text-anchor="middle" >过程示意 · 4 步循环，不代表实际耗时</text>
+</g></svg>
