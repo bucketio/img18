@@ -1,0 +1,236 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 1400" width="750" height="1400" role="img" aria-labelledby="la-title la-desc">
+<title id="la-title">冻结 W，不等于跳过反传</title>
+<desc id="la-desc">单个 LoRA 线性层的 16 秒循环过程示意，使用列向量，y=Wx+B(Ax)，省略缩放、偏置和 dropout。输入 x 来自更早的可训练模块，因此需要对 x 求梯度。前向 W 与 A/B 两路均参与；反向收到下游梯度 g，两路均把梯度传回 x，冻结的 W 仍用于计算 W 的转置乘 g。A/B 的参数梯度需要前向输入 x 与中间结果 Ax，这些结果可保存或重算。只有 A/B 更新；W 不计算参数梯度、不分配 W 的优化器状态。反向计算按教学重点拆成回传、求梯度两步，并非真实内核执行顺序。</desc>
+<defs>
+<marker id="la-gray" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L8 4L0 8Z" fill="#BBC9CE"/></marker>
+<marker id="la-forward" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L8 4L0 8Z" fill="#138A84"/></marker>
+<marker id="la-backward" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L8 4L0 8Z" fill="#DD7937"/></marker>
+</defs><g font-family="PingFang SC,Noto Sans CJK SC,Microsoft YaHei,sans-serif">
+<rect x="0" y="0" width="750" height="1400" rx="0" fill="#FAF8F2" stroke="none" stroke-width="2" />
+<text x="38" y="61" font-size="42" fill="#17324D" font-weight="700" text-anchor="start" >冻结 W，不等于跳过反传</text>
+<text x="38" y="109" font-size="32" fill="#647585" font-weight="500" text-anchor="start" >少更新参数，仍要传回梯度</text>
+<rect x="38" y="136" width="155" height="60" rx="14" fill="#E8ECEF" stroke="none" stroke-width="2" />
+<text x="115.5" y="177" font-size="32" fill="#647585" font-weight="600" text-anchor="middle" >① 前向</text>
+<g opacity="1" data-phase="0" data-component="navigation"><animate attributeName="opacity" values="1;0;0;0;1" keyTimes="0;0.25;0.5;0.75;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<rect x="38" y="136" width="155" height="60" rx="14" fill="#17324D" stroke="none" stroke-width="2" />
+<text x="115.5" y="177" font-size="32" fill="#FFFFFF" font-weight="700" text-anchor="middle" >① 前向</text>
+</g>
+<rect x="211" y="136" width="155" height="60" rx="14" fill="#E8ECEF" stroke="none" stroke-width="2" />
+<text x="288.5" y="177" font-size="32" fill="#647585" font-weight="600" text-anchor="middle" >② 回传</text>
+<g opacity="0" data-phase="1" data-component="navigation"><animate attributeName="opacity" values="0;1;0;0;0" keyTimes="0;0.25;0.5;0.75;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<rect x="211" y="136" width="155" height="60" rx="14" fill="#17324D" stroke="none" stroke-width="2" />
+<text x="288.5" y="177" font-size="32" fill="#FFFFFF" font-weight="700" text-anchor="middle" >② 回传</text>
+</g>
+<rect x="384" y="136" width="155" height="60" rx="14" fill="#E8ECEF" stroke="none" stroke-width="2" />
+<text x="461.5" y="177" font-size="32" fill="#647585" font-weight="600" text-anchor="middle" >③ 求梯度</text>
+<g opacity="0" data-phase="2" data-component="navigation"><animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;0.25;0.5;0.75;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<rect x="384" y="136" width="155" height="60" rx="14" fill="#17324D" stroke="none" stroke-width="2" />
+<text x="461.5" y="177" font-size="32" fill="#FFFFFF" font-weight="700" text-anchor="middle" >③ 求梯度</text>
+</g>
+<rect x="557" y="136" width="155" height="60" rx="14" fill="#E8ECEF" stroke="none" stroke-width="2" />
+<text x="634.5" y="177" font-size="32" fill="#647585" font-weight="600" text-anchor="middle" >④ 更新</text>
+<g opacity="0" data-phase="3" data-component="navigation"><animate attributeName="opacity" values="0;0;0;1;0" keyTimes="0;0.25;0.5;0.75;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<rect x="557" y="136" width="155" height="60" rx="14" fill="#17324D" stroke="none" stroke-width="2" />
+<text x="634.5" y="177" font-size="32" fill="#FFFFFF" font-weight="700" text-anchor="middle" >④ 更新</text>
+</g>
+<path d="M42 227H72" fill="none" stroke="#138A84" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#la-forward)" />
+<text x="84" y="238" font-size="30" fill="#138A84" font-weight="600" text-anchor="start" >前向</text>
+<path d="M231 227H201" fill="none" stroke="#DD7937" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#la-backward)" />
+<text x="242" y="238" font-size="30" fill="#DD7937" font-weight="600" text-anchor="start" >反向</text>
+<text x="491" y="238" font-size="30" fill="#658198" font-weight="600" text-anchor="start" >W 始终不更新</text>
+<text x="375" y="279" font-size="32" fill="#647585" font-weight="500" text-anchor="middle" >来自前面的可训练模块</text>
+<rect x="225" y="296" width="300" height="93" rx="16" fill="#FFFFFF" stroke="#BBC9CE" stroke-width="2" />
+<text x="375" y="336" font-size="36" fill="#17324D" font-weight="700" text-anchor="middle" >输入 x</text>
+<text x="375" y="373" font-size="32" fill="#DD7937" font-weight="600" text-anchor="middle" >需对 x 求梯度</text>
+<path d="M375 389V423H190V468" fill="none" stroke="#BBC9CE" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" data-edge="x-W"/>
+<path d="M375 389V423H555V468" fill="none" stroke="#BBC9CE" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" data-edge="x-A"/>
+<path d="M555 568V595" fill="none" stroke="#BBC9CE" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" data-edge="A-Ax"/>
+<path d="M555 655V686" fill="none" stroke="#BBC9CE" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" data-edge="Ax-B"/>
+<path d="M190 706V874H335" fill="none" stroke="#BBC9CE" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" data-edge="W-sum"/>
+<path d="M555 786V874H415" fill="none" stroke="#BBC9CE" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" data-edge="B-sum"/>
+<path d="M375 914V955" fill="none" stroke="#BBC9CE" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" data-edge="sum-loss"/>
+<g opacity="1" data-phase="0" data-component="flow"><animate attributeName="opacity" values="1;0;0;0;1" keyTimes="0;0.25;0.5;0.75;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<path d="M375 389V423H190V468" fill="none" stroke="#138A84" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#la-forward)" data-forward="x-W"/>
+<path d="M375 389V423H555V468" fill="none" stroke="#138A84" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#la-forward)" data-forward="x-A"/>
+<path d="M555 568V595" fill="none" stroke="#138A84" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#la-forward)" data-forward="A-Ax"/>
+<path d="M555 655V686" fill="none" stroke="#138A84" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#la-forward)" data-forward="Ax-B"/>
+<path d="M190 706V874H335" fill="none" stroke="#138A84" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#la-forward)" data-forward="W-sum"/>
+<path d="M555 786V874H415" fill="none" stroke="#138A84" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#la-forward)" data-forward="B-sum"/>
+<path d="M375 914V955" fill="none" stroke="#138A84" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#la-forward)" data-forward="sum-loss"/>
+</g>
+<g opacity="0" data-phase="1" data-component="flow"><animate attributeName="opacity" values="0;1;0;0;0" keyTimes="0;0.25;0.5;0.75;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<path d="M375 955V914" fill="none" stroke="#DD7937" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#la-backward)" data-backward="loss-sum"/>
+<path d="M335 874H190V706" fill="none" stroke="#DD7937" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#la-backward)" data-backward="sum-W"/>
+<path d="M190 468V423H375V389" fill="none" stroke="#DD7937" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#la-backward)" data-backward="W-x"/>
+<path d="M415 874H555V786" fill="none" stroke="#DD7937" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#la-backward)" data-backward="sum-B"/>
+<path d="M555 686V655" fill="none" stroke="#DD7937" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#la-backward)" data-backward="B-Ax"/>
+<path d="M555 595V568" fill="none" stroke="#DD7937" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#la-backward)" data-backward="Ax-A"/>
+<path d="M555 468V423H375V389" fill="none" stroke="#DD7937" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#la-backward)" data-backward="A-x"/>
+<text x="310" y="941" font-size="34" fill="#DD7937" font-weight="700" text-anchor="start" >g</text>
+<text x="55" y="415" font-size="36" fill="#DD7937" font-weight="700" text-anchor="start" >Wᵀg</text>
+<text x="40" y="452" font-size="30" fill="#DD7937" font-weight="600" text-anchor="start" >传回 x</text>
+</g>
+<g opacity="0" data-phase="2" data-component="flow"><animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;0.25;0.5;0.75;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<path d="M375 955V914" fill="none" stroke="#DD7937" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#la-backward)" data-backward="loss-sum"/>
+<path d="M335 874H190V706" fill="none" stroke="#DD7937" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#la-backward)" data-backward="sum-W"/>
+<path d="M190 468V423H375V389" fill="none" stroke="#DD7937" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#la-backward)" data-backward="W-x"/>
+<path d="M415 874H555V786" fill="none" stroke="#DD7937" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#la-backward)" data-backward="sum-B"/>
+<path d="M555 686V655" fill="none" stroke="#DD7937" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#la-backward)" data-backward="B-Ax"/>
+<path d="M555 595V568" fill="none" stroke="#DD7937" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#la-backward)" data-backward="Ax-A"/>
+<path d="M555 468V423H375V389" fill="none" stroke="#DD7937" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#la-backward)" data-backward="A-x"/>
+<text x="310" y="941" font-size="34" fill="#DD7937" font-weight="700" text-anchor="start" >g</text>
+<text x="55" y="415" font-size="36" fill="#DD7937" font-weight="700" text-anchor="start" >Wᵀg</text>
+<text x="40" y="452" font-size="30" fill="#DD7937" font-weight="600" text-anchor="start" >传回 x</text>
+</g>
+<rect x="76" y="468" width="235" height="238" rx="16" fill="#EAF0F4" stroke="#658198" stroke-width="3" />
+<text x="193.5" y="520" font-size="36" fill="#658198" font-weight="700" text-anchor="middle" >W · 冻结</text>
+<text x="193.5" y="573" font-size="32" fill="#658198" font-weight="600" text-anchor="middle" >不计算 dW</text>
+<text x="193.5" y="624" font-size="32" fill="#658198" font-weight="600" text-anchor="middle" >无优化器状态</text>
+<text x="193.5" y="676" font-size="32" fill="#17324D" font-weight="600" text-anchor="middle" >仍参与运算</text>
+<g opacity="0" data-phase="1" data-component="frozen-operation"><animate attributeName="opacity" values="0;1;0;0;0" keyTimes="0;0.25;0.5;0.75;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<rect x="72" y="464" width="243" height="246" rx="20" fill="none" stroke="#DD7937" stroke-width="5" />
+</g>
+<g opacity="0" data-phase="2" data-component="frozen-operation"><animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;0.25;0.5;0.75;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<rect x="72" y="464" width="243" height="246" rx="20" fill="none" stroke="#DD7937" stroke-width="5" />
+</g>
+<rect x="445" y="468" width="220" height="100" rx="16" fill="#E9F5F2" stroke="#138A84" stroke-width="3" />
+<text x="555" y="510" font-size="34" fill="#138A84" font-weight="700" text-anchor="middle" >A · 可训练</text>
+<rect x="481" y="595" width="148" height="60" rx="11" fill="#FFFFFF" stroke="#138A84" stroke-width="2" />
+<text x="555" y="636" font-size="34" fill="#138A84" font-weight="700" text-anchor="middle" >Ax</text>
+<text x="399" y="634" font-size="30" fill="#647585" font-weight="500" text-anchor="middle" >r 维</text>
+<rect x="445" y="686" width="220" height="100" rx="16" fill="#E9F5F2" stroke="#138A84" stroke-width="3" />
+<text x="555" y="728" font-size="34" fill="#138A84" font-weight="700" text-anchor="middle" >B · 可训练</text>
+<g opacity="1" data-phase="0" data-component="adapter-state"><animate attributeName="opacity" values="1;0;0;0;1" keyTimes="0;0.25;0.5;0.75;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<text x="555" y="550" font-size="30" fill="#138A84" font-weight="600" text-anchor="middle" >降到 r 维</text>
+<text x="555" y="768" font-size="30" fill="#138A84" font-weight="600" text-anchor="middle" >升回输出维度</text>
+</g>
+<g opacity="0" data-phase="1" data-component="adapter-state"><animate attributeName="opacity" values="0;1;0;0;0" keyTimes="0;0.25;0.5;0.75;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<text x="555" y="550" font-size="30" fill="#DD7937" font-weight="600" text-anchor="middle" >继续传回梯度</text>
+<text x="555" y="768" font-size="30" fill="#DD7937" font-weight="600" text-anchor="middle" >继续传回梯度</text>
+</g>
+<g opacity="0" data-phase="2" data-component="adapter-state"><animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;0.25;0.5;0.75;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<rect x="441" y="464" width="228" height="108" rx="20" fill="none" stroke="#DD7937" stroke-width="5" />
+<rect x="441" y="682" width="228" height="108" rx="20" fill="none" stroke="#DD7937" stroke-width="5" />
+<text x="555" y="550" font-size="30" fill="#DD7937" font-weight="600" text-anchor="middle" >计算 dA</text>
+<text x="555" y="768" font-size="30" fill="#DD7937" font-weight="600" text-anchor="middle" >计算 dB</text>
+</g>
+<g opacity="0" data-phase="3" data-component="adapter-state"><animate attributeName="opacity" values="0;0;0;1;0" keyTimes="0;0.25;0.5;0.75;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<rect x="439" y="462" width="232" height="112" rx="20" fill="none" stroke="#138A84" stroke-width="6" />
+<rect x="439" y="680" width="232" height="112" rx="20" fill="none" stroke="#138A84" stroke-width="6" />
+<text x="555" y="550" font-size="30" fill="#138A84" font-weight="600" text-anchor="middle" >只更新 A</text>
+<text x="555" y="768" font-size="30" fill="#138A84" font-weight="600" text-anchor="middle" >只更新 B</text>
+</g>
+<circle cx="375" cy="874" r="40" fill="#FFFFFF" stroke="#17324D" stroke-width="3"/>
+<text x="375" y="888" font-size="44" fill="#17324D" font-weight="700" text-anchor="middle" >+</text>
+<text x="424" y="934" font-size="32" fill="#17324D" font-weight="600" text-anchor="start" >y</text>
+<rect x="232" y="955" width="286" height="81" rx="16" fill="#FFFFFF" stroke="#BBC9CE" stroke-width="2" />
+<text x="375" y="1007" font-size="34" fill="#17324D" font-weight="600" text-anchor="middle" >后续层 / 损失</text>
+<text x="375" y="1078" font-size="34" fill="#17324D" font-weight="600" text-anchor="middle" >y = Wx + B(Ax)</text>
+<rect x="38" y="1104" width="674" height="112" rx="16" fill="#FFFFFF" stroke="#BBC9CE" stroke-width="2" stroke-dasharray="9 7"/>
+<text x="62" y="1148" font-size="34" fill="#17324D" font-weight="700" text-anchor="start" >前向中间结果：x、Ax</text>
+<text x="62" y="1193" font-size="32" fill="#647585" font-weight="500" text-anchor="start" >求 A/B 梯度时要用：保存或重算</text>
+<g opacity="0" data-phase="2" data-component="saved-activations"><animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;0.25;0.5;0.75;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<rect x="34" y="1100" width="682" height="120" rx="20" fill="none" stroke="#DD7937" stroke-width="4" stroke-dasharray="10 8"/>
+<path d="M693 1104V518H665" fill="none" stroke="#DD7937" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#la-backward)" stroke-dasharray="9 7" data-activation="x-to-dA"/>
+<path d="M693 736H665" fill="none" stroke="#DD7937" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#la-backward)" stroke-dasharray="9 7" data-activation="Ax-to-dB"/>
+</g>
+<rect x="38" y="1239" width="674" height="103" rx="16" fill="#E9F5F2" stroke="none" stroke-width="2" />
+<g opacity="1" data-phase="0" data-component="caption"><animate attributeName="opacity" values="1;0;0;0;1" keyTimes="0;0.25;0.5;0.75;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<text x="62" y="1280" font-size="34" fill="#17324D" font-weight="700" text-anchor="start" >前向：W 与 A/B 两路都参与</text>
+<text x="62" y="1321" font-size="32" fill="#647585" font-weight="500" text-anchor="start" >中间结果还要供后面的反传使用</text>
+</g>
+<g opacity="0" data-phase="1" data-component="caption"><animate attributeName="opacity" values="0;1;0;0;0" keyTimes="0;0.25;0.5;0.75;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<text x="62" y="1280" font-size="34" fill="#17324D" font-weight="700" text-anchor="start" >反向：梯度沿两路传回 x</text>
+<text x="62" y="1321" font-size="32" fill="#647585" font-weight="500" text-anchor="start" >W 虽冻结，仍用于计算 Wᵀg</text>
+</g>
+<g opacity="0" data-phase="2" data-component="caption"><animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;0.25;0.5;0.75;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<text x="62" y="1280" font-size="34" fill="#17324D" font-weight="700" text-anchor="start" >求梯度：A/B 需要 x、Ax</text>
+<text x="62" y="1321" font-size="32" fill="#647585" font-weight="500" text-anchor="start" >训练参数少，中间结果仍要用</text>
+</g>
+<g opacity="0" data-phase="3" data-component="caption"><animate attributeName="opacity" values="0;0;0;1;0" keyTimes="0;0.25;0.5;0.75;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<text x="62" y="1280" font-size="34" fill="#17324D" font-weight="700" text-anchor="start" >更新：只有 A、B 发生变化</text>
+<text x="62" y="1321" font-size="32" fill="#647585" font-weight="500" text-anchor="start" >W 保持不变；它的参数梯度不分配</text>
+</g>
+<text x="375" y="1380" font-size="28" fill="#647585" font-weight="500" text-anchor="middle" >单层过程示意；反向按教学重点分步展示</text>
+<g opacity="0" data-pulse="forward-x-W">
+<animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.01562;0.05625;0.06125;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<animateTransform attributeName="transform" type="translate" values="375 389;375 389;375 423;190 423;190 468;190 468;375 389" keyTimes="0.000000;0.015625;0.029167;0.042708;0.056250;0.061250;1.000000" dur="16s" begin="0s" repeatCount="indefinite"/>
+<circle r="8" fill="#138A84" stroke="#FFFFFF" stroke-width="3"/>
+</g>
+<g opacity="0" data-pulse="forward-x-A">
+<animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.01562;0.05625;0.06125;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<animateTransform attributeName="transform" type="translate" values="375 389;375 389;375 423;555 423;555 468;555 468;375 389" keyTimes="0.000000;0.015625;0.029167;0.042708;0.056250;0.061250;1.000000" dur="16s" begin="0s" repeatCount="indefinite"/>
+<circle r="8" fill="#138A84" stroke="#FFFFFF" stroke-width="3"/>
+</g>
+<g opacity="0" data-pulse="forward-A-Ax">
+<animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.07187;0.08750;0.09250;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<animateTransform attributeName="transform" type="translate" values="555 568;555 568;555 595;555 595;555 568" keyTimes="0.000000;0.071875;0.087500;0.092500;1.000000" dur="16s" begin="0s" repeatCount="indefinite"/>
+<circle r="8" fill="#138A84" stroke="#FFFFFF" stroke-width="3"/>
+</g>
+<g opacity="0" data-pulse="forward-Ax-B">
+<animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.10000;0.11563;0.12063;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<animateTransform attributeName="transform" type="translate" values="555 655;555 655;555 686;555 686;555 655" keyTimes="0.000000;0.100000;0.115625;0.120625;1.000000" dur="16s" begin="0s" repeatCount="indefinite"/>
+<circle r="8" fill="#138A84" stroke="#FFFFFF" stroke-width="3"/>
+</g>
+<g opacity="0" data-pulse="forward-W-sum">
+<animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.09375;0.16562;0.17062;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<animateTransform attributeName="transform" type="translate" values="190 706;190 706;190 874;335 874;335 874;190 706" keyTimes="0.000000;0.093750;0.129688;0.165625;0.170625;1.000000" dur="16s" begin="0s" repeatCount="indefinite"/>
+<circle r="8" fill="#138A84" stroke="#FFFFFF" stroke-width="3"/>
+</g>
+<g opacity="0" data-pulse="forward-B-sum">
+<animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.12812;0.16562;0.17062;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<animateTransform attributeName="transform" type="translate" values="555 786;555 786;555 874;415 874;415 874;555 786" keyTimes="0.000000;0.128125;0.146875;0.165625;0.170625;1.000000" dur="16s" begin="0s" repeatCount="indefinite"/>
+<circle r="8" fill="#138A84" stroke="#FFFFFF" stroke-width="3"/>
+</g>
+<g opacity="0" data-pulse="forward-sum-loss">
+<animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.18438;0.20938;0.21438;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<animateTransform attributeName="transform" type="translate" values="375 914;375 914;375 955;375 955;375 914" keyTimes="0.000000;0.184375;0.209375;0.214375;1.000000" dur="16s" begin="0s" repeatCount="indefinite"/>
+<circle r="8" fill="#138A84" stroke="#FFFFFF" stroke-width="3"/>
+</g>
+<g opacity="0" data-pulse="backward-loss-sum">
+<animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.25938;0.27813;0.28313;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<animateTransform attributeName="transform" type="translate" values="375 955;375 955;375 914;375 914;375 955" keyTimes="0.000000;0.259375;0.278125;0.283125;1.000000" dur="16s" begin="0s" repeatCount="indefinite"/>
+<circle r="8" fill="#DD7937" stroke="#FFFFFF" stroke-width="3"/>
+</g>
+<g opacity="0" data-pulse="backward-sum-W">
+<animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.28437;0.32812;0.33313;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<animateTransform attributeName="transform" type="translate" values="335 874;335 874;190 874;190 706;190 706;335 874" keyTimes="0.000000;0.284375;0.306250;0.328125;0.333125;1.000000" dur="16s" begin="0s" repeatCount="indefinite"/>
+<circle r="8" fill="#DD7937" stroke="#FFFFFF" stroke-width="3"/>
+</g>
+<g opacity="0" data-pulse="backward-W-x">
+<animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.35000;0.41250;0.41750;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<animateTransform attributeName="transform" type="translate" values="190 468;190 468;190 423;375 423;375 389;375 389;190 468" keyTimes="0.000000;0.350000;0.370833;0.391667;0.412500;0.417500;1.000000" dur="16s" begin="0s" repeatCount="indefinite"/>
+<circle r="8" fill="#DD7937" stroke="#FFFFFF" stroke-width="3"/>
+</g>
+<g opacity="0" data-pulse="backward-sum-B">
+<animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.28437;0.31562;0.32062;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<animateTransform attributeName="transform" type="translate" values="415 874;415 874;555 874;555 786;555 786;415 874" keyTimes="0.000000;0.284375;0.300000;0.315625;0.320625;1.000000" dur="16s" begin="0s" repeatCount="indefinite"/>
+<circle r="8" fill="#DD7937" stroke="#FFFFFF" stroke-width="3"/>
+</g>
+<g opacity="0" data-pulse="backward-B-Ax">
+<animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.33750;0.35313;0.35813;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<animateTransform attributeName="transform" type="translate" values="555 686;555 686;555 655;555 655;555 686" keyTimes="0.000000;0.337500;0.353125;0.358125;1.000000" dur="16s" begin="0s" repeatCount="indefinite"/>
+<circle r="8" fill="#DD7937" stroke="#FFFFFF" stroke-width="3"/>
+</g>
+<g opacity="0" data-pulse="backward-Ax-A">
+<animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.36875;0.38438;0.38938;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<animateTransform attributeName="transform" type="translate" values="555 595;555 595;555 568;555 568;555 595" keyTimes="0.000000;0.368750;0.384375;0.389375;1.000000" dur="16s" begin="0s" repeatCount="indefinite"/>
+<circle r="8" fill="#DD7937" stroke="#FFFFFF" stroke-width="3"/>
+</g>
+<g opacity="0" data-pulse="backward-A-x">
+<animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.40313;0.46250;0.46750;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<animateTransform attributeName="transform" type="translate" values="555 468;555 468;555 423;375 423;375 389;375 389;555 468" keyTimes="0.000000;0.403125;0.422917;0.442708;0.462500;0.467500;1.000000" dur="16s" begin="0s" repeatCount="indefinite"/>
+<circle r="8" fill="#DD7937" stroke="#FFFFFF" stroke-width="3"/>
+</g>
+<g opacity="0" data-pulse="activation-x-dA">
+<animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.53750;0.61250;0.61750;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<animateTransform attributeName="transform" type="translate" values="693 1104;693 1104;693 518;665 518;665 518;693 1104" keyTimes="0.000000;0.537500;0.575000;0.612500;0.617500;1.000000" dur="16s" begin="0s" repeatCount="indefinite"/>
+<circle r="8" fill="#DD7937" stroke="#FFFFFF" stroke-width="3"/>
+</g>
+<g opacity="0" data-pulse="activation-Ax-dB">
+<animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.53750;0.59375;0.59875;1" calcMode="discrete" dur="16s" begin="0s" repeatCount="indefinite"/>
+<animateTransform attributeName="transform" type="translate" values="693 1104;693 1104;693 736;665 736;665 736;693 1104" keyTimes="0.000000;0.537500;0.565625;0.593750;0.598750;1.000000" dur="16s" begin="0s" repeatCount="indefinite"/>
+<circle r="8" fill="#DD7937" stroke="#FFFFFF" stroke-width="3"/>
+</g>
+</g>
+</svg>
