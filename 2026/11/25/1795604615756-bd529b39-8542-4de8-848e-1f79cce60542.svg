@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="840" viewBox="0 0 1600 840">
+  <style>text { font-family: 'PingFang SC', 'Hiragino Sans GB', 'STHeiti', 'Helvetica Neue', sans-serif; }</style>
+  <rect width="1600" height="840" fill="#FFFFFF"/>
+
+  <!-- Header -->
+  <text x="64" y="76" font-size="34" font-weight="800" fill="#0F172A">6周6本综合顶刊：结构金属的“少数派”格局与5条通关路径</text>
+  <text x="64" y="114" font-size="18" fill="#475569">数据窗口：2026-10-12 至 2026-11-22｜Nat. Mater., Sci. Adv., Nat. Commun., Mater. Today, AM, AFM（总计 255 篇）</text>
+  <line x1="64" y1="138" x2="1536" y2="138" stroke="#E2E8F0" stroke-width="2"/>
+
+  <!-- Left Card: 大盘反差 -->
+  <rect x="64" y="170" width="590" height="590" rx="16" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5"/>
+  <text x="96" y="218" font-size="24" font-weight="700" fill="#0F172A">① 综合顶刊大盘反差</text>
+
+  <!-- Stage 1: 255 -> 25 -->
+  <text x="96" y="268" font-size="18" font-weight="600" fill="#334155">6本综合顶刊总收录：255 篇</text>
+  <rect x="96" y="284" width="526" height="54" rx="10" fill="#E2E8F0"/>
+  <rect x="96" y="284" width="56" height="54" rx="10" fill="#1D4E89"/>
+  <text x="124" y="318" text-anchor="middle" font-size="19" font-weight="800" fill="#FFFFFF">25</text>
+  <text x="170" y="317" font-size="16" fill="#475569">其余 230 篇（电池金属/催化/非金属AI等，90.2%）</text>
+  <text x="96" y="368" font-size="18" font-weight="700" fill="#1D4E89">四大结构金属仅占 9.8%（25 / 255）</text>
+
+  <!-- Down arrow -->
+  <path d="M 124 386 L 124 434 L 180 434" fill="none" stroke="#94A3B8" stroke-width="2.5" stroke-dasharray="5,4"/>
+  <polygon points="180,427 194,434 180,441" fill="#94A3B8"/>
+
+  <!-- Stage 2: 25 -> 6 vs 19 -->
+  <text x="96" y="478" font-size="18" font-weight="600" fill="#334155">25 篇结构金属内部拆解：纯结构 vs 跨界</text>
+  <rect x="96" y="496" width="134" height="76" rx="10" fill="#1D4E89"/>
+  <text x="163" y="528" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">纯结构</text>
+  <text x="163" y="555" text-anchor="middle" font-size="16" font-weight="600" fill="#DBEAFE">6 篇 (24%)</text>
+
+  <rect x="238" y="496" width="384" height="76" rx="10" fill="#E76F51"/>
+  <text x="430" y="528" text-anchor="middle" font-size="19" font-weight="700" fill="#FFFFFF">跨界功能 / 能源 / 催化 / 电池界面</text>
+  <text x="430" y="555" text-anchor="middle" font-size="17" font-weight="600" fill="#FFEDD5">19 篇 (76%)</text>
+
+  <!-- Summary Box -->
+  <rect x="96" y="604" width="526" height="124" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+  <text x="122" y="638" font-size="18" font-weight="700" fill="#0F172A">核心观察</text>
+  <text x="122" y="672" font-size="16" fill="#475569">• 仅靠常规强塑微调极难打进综合顶刊</text>
+  <text x="122" y="702" font-size="16" fill="#475569">• 超四分之三论文靠磁场外场、循环能源、催化或电池界面跨界</text>
+
+  <!-- Right Panel: 5 Pathways -->
+  <text x="696" y="218" font-size="24" font-weight="700" fill="#0F172A">② 25 篇结构金属的 5 条通关路径（按金属堆叠）</text>
+  <!-- Gridlines -->
+  <line x1="980" y1="248" x2="980" y2="700" stroke="#CBD5E1" stroke-width="1.5"/>
+  <line x1="1124" y1="248" x2="1124" y2="700" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="1268" y1="248" x2="1268" y2="700" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="1412" y1="248" x2="1412" y2="700" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="980" y="724" text-anchor="middle" font-size="15" fill="#64748B">0</text>
+  <text x="1124" y="724" text-anchor="middle" font-size="15" fill="#64748B">2</text>
+  <text x="1268" y="724" text-anchor="middle" font-size="15" fill="#64748B">4</text>
+  <text x="1412" y="724" text-anchor="middle" font-size="15" fill="#64748B">6 篇</text>
+
+  <text x="962" y="294" text-anchor="end" font-size="20" font-weight="600" fill="#0F172A">路径一：硬核结构破界</text><rect x="980" y="265" width="213" height="46" rx="6" fill="#1D4E89"/><text x="1086.5" y="294" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF">高熵 3</text><rect x="1196" y="265" width="141" height="46" rx="6" fill="#7B61FF"/><text x="1266.5" y="294" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF">钛 2</text><rect x="1340" y="265" width="69" height="46" rx="6" fill="#2A9D8F"/><text x="1374.5" y="294" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF">1</text><text x="1426" y="294" font-size="20" font-weight="700" fill="#0F172A">6 篇</text><text x="962" y="378" text-anchor="end" font-size="20" font-weight="600" fill="#0F172A">路径二：结构+磁场与外场</text><rect x="980" y="349" width="213" height="46" rx="6" fill="#1D4E89"/><text x="1086.5" y="378" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF">高熵 3</text><rect x="1196" y="349" width="141" height="46" rx="6" fill="#E76F51"/><text x="1266.5" y="378" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF">钢 2</text><text x="1354" y="378" font-size="20" font-weight="700" fill="#0F172A">5 篇</text><text x="962" y="462" text-anchor="end" font-size="20" font-weight="600" fill="#0F172A">路径三：绿色循环与能源</text><rect x="980" y="433" width="141" height="46" rx="6" fill="#E76F51"/><text x="1050.5" y="462" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF">钢 2</text><rect x="1124" y="433" width="69" height="46" rx="6" fill="#2A9D8F"/><text x="1158.5" y="462" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF">1</text><rect x="1196" y="433" width="69" height="46" rx="6" fill="#1D4E89"/><text x="1230.5" y="462" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF">1</text><rect x="1268" y="433" width="69" height="46" rx="6" fill="#7B61FF"/><text x="1302.5" y="462" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF">1</text><text x="1354" y="462" font-size="20" font-weight="700" fill="#0F172A">5 篇</text><text x="962" y="546" text-anchor="end" font-size="20" font-weight="600" fill="#0F172A">路径四：高熵跨界催化/生物</text><rect x="980" y="517" width="357" height="46" rx="6" fill="#1D4E89"/><text x="1158.5" y="546" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF">高熵 5</text><text x="1354" y="546" font-size="20" font-weight="700" fill="#0F172A">5 篇</text><text x="962" y="630" text-anchor="end" font-size="20" font-weight="600" fill="#0F172A">路径五：电池与光电里的铝</text><rect x="980" y="601" width="285" height="46" rx="6" fill="#2A9D8F"/><text x="1122.5" y="630" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF">铝 4</text><text x="1282" y="630" font-size="20" font-weight="700" fill="#0F172A">4 篇</text>
+
+  <!-- Legend -->
+  <rect x="696" y="746" width="18" height="18" rx="4" fill="#1D4E89"/><text x="722" y="761" font-size="16" fill="#334155">高熵/多主元 (12)</text>
+  <rect x="888" y="746" width="18" height="18" rx="4" fill="#2A9D8F"/><text x="914" y="761" font-size="16" fill="#334155">铝合金 (6)</text>
+  <rect x="1036" y="746" width="18" height="18" rx="4" fill="#E76F51"/><text x="1062" y="761" font-size="16" fill="#334155">钢铁 (4)</text>
+  <rect x="1168" y="746" width="18" height="18" rx="4" fill="#7B61FF"/><text x="1194" y="761" font-size="16" fill="#334155">钛合金 (3)</text>
+
+  <!-- Footer -->
+  <text x="64" y="808" font-size="15" fill="#94A3B8">来源：本地研究观察库 observatory.sqlite3（六周 17 刊），按唯一 DOI 去重统计</text>
+</svg>
